@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
       moveDown()
     }
   }
-  document.addEventListener('keyup', control)
+  document.addEventListener('keydown', control)
 
   //move down function
   const moveDown = () => {

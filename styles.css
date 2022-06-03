@@ -1,34 +1,108 @@
+body {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #832cac;
+margin: 0px;
+padding: 0px;
+ 
+}
+
+h1 {
+    text-align: center;
+}
+.grid-container{
+     text-align: center;
+}
 .container {
-    display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#start-button {
+  background-color: #5c1e79;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 0px;
+  color: #fff;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+#start-button:hover {
+  background-color: #4679b3;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .grid {
-    width: 200px;
-    height: 400px;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: yellow;
+  width: 40vh;
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #aae0ff;
+  border: 4px solid white;
 }
 
 .grid div {
-    height: 20px;
-    width: 20px;
+  height: calc(80vh / 20);
+  width: calc(80vh / 20);
 }
 
 .tetromino {
-    background-color: blue;
+  background-color: blue;
+  outline: 1px solid white;
+  box-shadow: 12px 12px 16px 0 rgba(255, 255, 255, 0.3) inset,
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.25) inset;
+    
 }
 
 .mini-grid {
-    margin-left: 50px;
-    width: 80px;
-    height: 80px;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: yellow;
+  
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #aae0ff;
+  border: 4px solid white;
 }
 
 .mini-grid div {
-    height: 20px;
-    width: 20px;
+  height: 20px;
+  width: 20px;
+}
+
+.info-container{
+    margin-left: 50px;
+}
+
+.taken{
+    transition: ease-in-out .3s;
+}
+
+.title-phone{
+display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .info-container {
+      margin: 10px 20px 0px 20px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: start
+  }
+
+.title-phone{
+    display:contents;
+    font-size: 45px;  
+}
+
+.title {
+    display: none;
+}
+  .container {
+      flex-wrap: wrap-reverse;
+  }
 }
